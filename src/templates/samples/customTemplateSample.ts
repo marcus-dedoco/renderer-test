@@ -78,6 +78,6 @@ export const gfiCocTemplateCertificate: GfiCocTemplateCertificate = {
   $template: {
     name: "gfiCerts_dacfc",
     type: v2.TemplateType.EmbeddedRenderer,
-    url: "http://localhost:3000"
+    url: "https://optimistic-wing-536118.netlify.app"
   }
 };
