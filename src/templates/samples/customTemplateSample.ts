@@ -76,7 +76,7 @@ export const gfiCocTemplateCertificate: GfiCocTemplateCertificate = {
     appointment3: "Global Fintech Instituite"
   },
   $template: {
-    name: "gfiCerts_dacfc",
+    name: "dacfc",
     type: v2.TemplateType.EmbeddedRenderer,
     url: "https://optimistic-wing-536118.netlify.app"
   }
