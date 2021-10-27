@@ -4,6 +4,13 @@ import { css } from "@emotion/core";
 import { GfiCocTemplateCertificate } from "../samples/customTemplateSample";
 
 const containerStyle = css`
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  font-family: Arial, sans-serif;
+`;
+
+const certificateStyle = css`
   position: absolute;
   width: 1130.88px;
   height: 1052.08px;
@@ -112,96 +119,102 @@ export const CocTemplate: FunctionComponent<TemplateProps<GfiCocTemplateCertific
 }) => {
   return (
     <div css={containerStyle} className={className} id="custom-template">
-      <img css={backgroundImageStyle} src={document.certificateTemplate.file} alt={document.certificateTemplate.name} />
-      <div css={contentStyle}>
-        <div css={logoContainerStyle}>
-          <div>
-            <img css={logoStyle} src={document.signers.signer1.logo} alt={document.signers.signer1.entity} />
+      <div css={certificateStyle}>
+        <img
+          css={backgroundImageStyle}
+          src={document.certificateTemplate.file}
+          alt={document.certificateTemplate.name}
+        />
+        <div css={contentStyle}>
+          <div css={logoContainerStyle}>
+            <div>
+              <img css={logoStyle} src={document.signers.signer1.logo} alt={document.signers.signer1.entity} />
+            </div>
+            <div>
+              <img css={logoStyle} src={document.signers.signer2.logo} alt={document.signers.signer2.entity} />
+            </div>
+            <div>
+              <img css={logoStyle} src={document.signers.signer3.logo} alt={document.signers.signer3.entity} />
+            </div>
           </div>
-          <div>
-            <img css={logoStyle} src={document.signers.signer2.logo} alt={document.signers.signer2.entity} />
+          <div css={margin10TopStyle}>
+            <span css={mediumTextStyle}>This is to certify that</span>
           </div>
-          <div>
-            <img css={logoStyle} src={document.signers.signer3.logo} alt={document.signers.signer3.entity} />
+          <div css={margin10TopStyle}>
+            <span css={largeTextStyleBold}>{document.recipient.name}</span>
+            <hr css={hrStyleName} />
           </div>
-        </div>
-        <div css={margin10TopStyle}>
-          <span css={mediumTextStyle}>This is to certify that</span>
-        </div>
-        <div css={margin10TopStyle}>
-          <span css={largeTextStyleBold}>{document.recipient.name}</span>
-          <hr css={hrStyleName} />
-        </div>
-        <div css={margin10TopStyle}>
-          <span css={mediumTextStyle}>has attended</span>
-        </div>
-        <div css={margin10TopStyle}>
-          <span css={mediumTextStyleBold}>{document.courseDetails.name}</span>
-        </div>
-        <div css={margin10TopStyle}>
-          <span css={mediumTextStyle}>and passed the required assessment.</span>
-        </div>
-        <div css={margin10TopStyle}>
-          <span css={mediumTextStyle}>
-            Date: <u>{document.courseDetails.date}</u>
-          </span>
-        </div>
-        <div css={signatureContainerStyleStyle}>
-          <div>
-            <img css={signatureStyle} src={document.signers.signer1.signature} alt={document.signers.signer1.name} />
-            <hr css={hrStyleSignature} />
+          <div css={margin10TopStyle}>
+            <span css={mediumTextStyle}>has attended</span>
           </div>
-          <div>
-            <img css={signatureStyle} src={document.signers.signer2.signature} alt={document.signers.signer2.name} />
-            <hr css={hrStyleSignature} />
+          <div css={margin10TopStyle}>
+            <span css={mediumTextStyleBold}>{document.courseDetails.name}</span>
           </div>
-          <div>
-            <img css={signatureStyle} src={document.signers.signer3.signature} alt={document.signers.signer3.name} />
-            <hr css={hrStyleSignature} />
+          <div css={margin10TopStyle}>
+            <span css={mediumTextStyle}>and passed the required assessment.</span>
           </div>
-        </div>
+          <div css={margin10TopStyle}>
+            <span css={mediumTextStyle}>
+              Date: <u>{document.courseDetails.date}</u>
+            </span>
+          </div>
+          <div css={signatureContainerStyleStyle}>
+            <div>
+              <img css={signatureStyle} src={document.signers.signer1.signature} alt={document.signers.signer1.name} />
+              <hr css={hrStyleSignature} />
+            </div>
+            <div>
+              <img css={signatureStyle} src={document.signers.signer2.signature} alt={document.signers.signer2.name} />
+              <hr css={hrStyleSignature} />
+            </div>
+            <div>
+              <img css={signatureStyle} src={document.signers.signer3.signature} alt={document.signers.signer3.name} />
+              <hr css={hrStyleSignature} />
+            </div>
+          </div>
 
-        <div css={detailsContainerStyleStyle}>
-          <div css={detailsStyle}>
-            <div>
-              <span css={smallTextHeaderStyle}>{document.signers.signer1.name}</span>
+          <div css={detailsContainerStyleStyle}>
+            <div css={detailsStyle}>
+              <div>
+                <span css={smallTextHeaderStyle}>{document.signers.signer1.name}</span>
+              </div>
+              <div>
+                <span css={smallTextStyle}>{document.signers.signer1.appointment1.replace(/&amp;/g, "&")}</span>
+              </div>
+              <div>
+                <span css={smallTextStyle}>{document.signers.signer1.appointment2.replace(/&amp;/g, "&")}</span>
+              </div>
+              <div>
+                <span css={smallTextStyle}>{document.signers.signer1.appointment3.replace(/&amp;/g, "&")}</span>
+              </div>
             </div>
-            <div>
-              <span css={smallTextStyle}>{document.signers.signer1.appointment1.replace(/&amp;/g, "&")}</span>
+            <div css={detailsStyle}>
+              <div>
+                <span css={smallTextHeaderStyle}>{document.signers.signer2.name}</span>
+              </div>
+              <div>
+                <span css={smallTextStyle}>{document.signers.signer2.appointment1.replace(/&amp;/g, "&")}</span>
+              </div>
+              <div>
+                <span css={smallTextStyle}>{document.signers.signer2.appointment2.replace(/&amp;/g, "&")}</span>
+              </div>
+              <div>
+                <span css={smallTextStyle}>{document.signers.signer2.appointment3.replace(/&amp;/g, "&")}</span>
+              </div>
             </div>
-            <div>
-              <span css={smallTextStyle}>{document.signers.signer1.appointment2.replace(/&amp;/g, "&")}</span>
-            </div>
-            <div>
-              <span css={smallTextStyle}>{document.signers.signer1.appointment3.replace(/&amp;/g, "&")}</span>
-            </div>
-          </div>
-          <div css={detailsStyle}>
-            <div>
-              <span css={smallTextHeaderStyle}>{document.signers.signer2.name}</span>
-            </div>
-            <div>
-              <span css={smallTextStyle}>{document.signers.signer2.appointment1.replace(/&amp;/g, "&")}</span>
-            </div>
-            <div>
-              <span css={smallTextStyle}>{document.signers.signer2.appointment2.replace(/&amp;/g, "&")}</span>
-            </div>
-            <div>
-              <span css={smallTextStyle}>{document.signers.signer2.appointment3.replace(/&amp;/g, "&")}</span>
-            </div>
-          </div>
-          <div css={detailsStyle}>
-            <div>
-              <span css={smallTextHeaderStyle}>{document.signers.signer3.name}</span>
-            </div>
-            <div>
-              <span css={smallTextStyle}>{document.signers.signer3.appointment1.replace(/&amp;/g, "&")}</span>
-            </div>
-            <div>
-              <span css={smallTextStyle}>{document.signers.signer3.appointment2.replace(/&amp;/g, "&")}</span>
-            </div>
-            <div>
-              <span css={smallTextStyle}>{document.signers.signer3.appointment3.replace(/&amp;/g, "&")}</span>
+            <div css={detailsStyle}>
+              <div>
+                <span css={smallTextHeaderStyle}>{document.signers.signer3.name}</span>
+              </div>
+              <div>
+                <span css={smallTextStyle}>{document.signers.signer3.appointment1.replace(/&amp;/g, "&")}</span>
+              </div>
+              <div>
+                <span css={smallTextStyle}>{document.signers.signer3.appointment2.replace(/&amp;/g, "&")}</span>
+              </div>
+              <div>
+                <span css={smallTextStyle}>{document.signers.signer3.appointment3.replace(/&amp;/g, "&")}</span>
+              </div>
             </div>
           </div>
         </div>
