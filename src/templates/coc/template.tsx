@@ -38,7 +38,7 @@ const logoContainerStyle = css`
 `;
 
 const logoStyle = css`
-  width: 15vw;
+  width: 200px;
 `;
 
 const margin10TopStyle = css`
@@ -87,7 +87,7 @@ const signatureContainerStyleStyle = css`
 `;
 
 const signatureStyle = css`
-  width: 10vw;
+  width: 200px;
 `;
 
 const detailsContainerStyleStyle = css`
