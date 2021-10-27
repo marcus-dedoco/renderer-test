@@ -35,7 +35,11 @@ const logoContainerStyle = css`
 `;
 
 const logoStyle = css`
+<<<<<<< HEAD
   width: 300px;
+=======
+  width: 15vw;
+>>>>>>> parent of 3e9d239 (fix logo and signature size)
 `;
 
 const margin40TopStyle = css`
@@ -89,7 +93,11 @@ const signatureContainerStyleStyle = css`
 `;
 
 const signatureStyle = css`
+<<<<<<< HEAD
   width: 300px;
+=======
+  width: 10vw;
+>>>>>>> parent of 3e9d239 (fix logo and signature size)
 `;
 
 const detailsContainerStyleStyle = css`
