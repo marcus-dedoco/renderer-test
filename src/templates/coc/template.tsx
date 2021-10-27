@@ -38,8 +38,8 @@ const logoStyle = css`
   width: 300px;
 `;
 
-const margin20TopStyle = css`
-  margin-top: 20px;
+const margin40TopStyle = css`
+  margin-top: 40px;
 `;
 
 const margin100TopStyle = css`
@@ -127,20 +127,20 @@ export const CocTemplate: FunctionComponent<TemplateProps<GfiCocTemplateCertific
         <div css={margin100TopStyle}>
           <span css={mediumTextStyle}>This is to certify that</span>
         </div>
-        <div css={margin20TopStyle}>
+        <div css={margin40TopStyle}>
           <span css={largeTextStyleBold}>{document.recipient.name}</span>
           <hr css={hrStyleName} />
         </div>
-        <div css={margin20TopStyle}>
+        <div css={margin40TopStyle}>
           <span css={mediumTextStyle}>has attended</span>
         </div>
-        <div css={margin20TopStyle}>
+        <div css={margin40TopStyle}>
           <span css={mediumTextStyleBold}>{document.courseDetails.name}</span>
         </div>
-        <div css={margin20TopStyle}>
+        <div css={margin40TopStyle}>
           <span css={mediumTextStyle}>and passed the required assessment.</span>
         </div>
-        <div css={margin20TopStyle}>
+        <div css={margin40TopStyle}>
           <span css={mediumTextStyle}>
             Date: <u>{document.courseDetails.date}</u>
           </span>
