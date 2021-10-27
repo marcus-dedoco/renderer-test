@@ -4,24 +4,21 @@ import { css } from "@emotion/core";
 import { GfiCocTemplateCertificate } from "../samples/customTemplateSample";
 
 const containerStyle = css`
-  width: 1130.88px;
-  height: 1052.08px;
+  width: 100%;
   text-align: center;
   font-family: Arial, sans-serif;
 `;
 
 const backgroundImageStyle = css`
   position: absolute;
-  width: 1130.88px;
-  height: 1052.08px;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: -1;
 `;
 
 const contentStyle = css`
-  width: 1130.88px;
-  height: 1052.08px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -29,21 +26,26 @@ const contentStyle = css`
 `;
 
 const logoContainerStyle = css`
-  padding-top: 174px;
+  padding-top: 250px;
   margin-bottom: 20px;
-  width: 1130.88px;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 `;
 
 const logoStyle = css`
-  width: 200px;
+  width: 300px;
 `;
 
-const margin10TopStyle = css`
-  margin-top: 10px;
+const margin20TopStyle = css`
+  margin-top: 20px;
 `;
+
+const margin100TopStyle = css`
+  margin-top: 100px;
+`;
+
 const largeTextStyleBold = css`
   font-size: 75px;
   font-weight: 700;
@@ -75,31 +77,31 @@ const hrStyleName = css`
 `;
 
 const hrStyleSignature = css`
-  width: 238px;
+  width: 380px;
 `;
 
 const signatureContainerStyleStyle = css`
-  margin-top: 20px;
-  width: 1130.88px;
+  margin-top: 100px;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
 `;
 
 const signatureStyle = css`
-  width: 200px;
+  width: 300px;
 `;
 
 const detailsContainerStyleStyle = css`
   padding-bottom: 50px;
-  width: 1130.88px;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
 `;
 
 const detailsStyle = css`
-  width: 240px;
+  width: 380px;
   text-align: left;
 `;
 
@@ -122,23 +124,23 @@ export const CocTemplate: FunctionComponent<TemplateProps<GfiCocTemplateCertific
             <img css={logoStyle} src={document.signers.signer3.logo} alt={document.signers.signer3.entity} />
           </div>
         </div>
-        <div css={margin10TopStyle}>
+        <div css={margin100TopStyle}>
           <span css={mediumTextStyle}>This is to certify that</span>
         </div>
-        <div css={margin10TopStyle}>
+        <div css={margin20TopStyle}>
           <span css={largeTextStyleBold}>{document.recipient.name}</span>
           <hr css={hrStyleName} />
         </div>
-        <div css={margin10TopStyle}>
+        <div css={margin20TopStyle}>
           <span css={mediumTextStyle}>has attended</span>
         </div>
-        <div css={margin10TopStyle}>
+        <div css={margin20TopStyle}>
           <span css={mediumTextStyleBold}>{document.courseDetails.name}</span>
         </div>
-        <div css={margin10TopStyle}>
+        <div css={margin20TopStyle}>
           <span css={mediumTextStyle}>and passed the required assessment.</span>
         </div>
-        <div css={margin10TopStyle}>
+        <div css={margin20TopStyle}>
           <span css={mediumTextStyle}>
             Date: <u>{document.courseDetails.date}</u>
           </span>
