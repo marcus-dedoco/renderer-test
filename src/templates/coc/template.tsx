@@ -5,7 +5,7 @@ import { GfiCocTemplateCertificate } from "../samples/customTemplateSample";
 
 const containerStyle = css`
   width: 100vw;
-  height: 100%;
+  height: 1052.08px;
   text-align: center;
   font-family: Arial, sans-serif;
 `;
