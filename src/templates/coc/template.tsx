@@ -4,21 +4,24 @@ import { css } from "@emotion/core";
 import { GfiCocTemplateCertificate } from "../samples/customTemplateSample";
 
 const containerStyle = css`
-  width: 100%;
+  width: 1130.88px;
+  height: 1052.08px;
   text-align: center;
   font-family: Arial, sans-serif;
 `;
 
 const backgroundImageStyle = css`
   position: absolute;
-  width: 100%;
+  width: 1130.88px;
+  height: 1052.08px;
   top: 0;
   left: 0;
   z-index: -1;
 `;
 
 const contentStyle = css`
-  width: 100%;
+  width: 1130.88px;
+  height: 1052.08px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,30 +29,21 @@ const contentStyle = css`
 `;
 
 const logoContainerStyle = css`
-  padding-top: 250px;
+  padding-top: 174px;
   margin-bottom: 20px;
-  width: 100%;
+  width: 1130.88px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 `;
 
 const logoStyle = css`
-<<<<<<< HEAD
-  width: 300px;
-=======
-  width: 15vw;
->>>>>>> parent of 3e9d239 (fix logo and signature size)
+  width: 200px;
 `;
 
-const margin40TopStyle = css`
-  margin-top: 40px;
+const margin10TopStyle = css`
+  margin-top: 10px;
 `;
-
-const margin100TopStyle = css`
-  margin-top: 100px;
-`;
-
 const largeTextStyleBold = css`
   font-size: 75px;
   font-weight: 700;
@@ -81,35 +75,31 @@ const hrStyleName = css`
 `;
 
 const hrStyleSignature = css`
-  width: 380px;
+  width: 238px;
 `;
 
 const signatureContainerStyleStyle = css`
-  margin-top: 100px;
-  width: 100%;
+  margin-top: 20px;
+  width: 1130.88px;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
 `;
 
 const signatureStyle = css`
-<<<<<<< HEAD
-  width: 300px;
-=======
-  width: 10vw;
->>>>>>> parent of 3e9d239 (fix logo and signature size)
+  width: 200px;
 `;
 
 const detailsContainerStyleStyle = css`
   padding-bottom: 50px;
-  width: 100%;
+  width: 1130.88px;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
 `;
 
 const detailsStyle = css`
-  width: 380px;
+  width: 240px;
   text-align: left;
 `;
 
@@ -132,23 +122,23 @@ export const CocTemplate: FunctionComponent<TemplateProps<GfiCocTemplateCertific
             <img css={logoStyle} src={document.signers.signer3.logo} alt={document.signers.signer3.entity} />
           </div>
         </div>
-        <div css={margin100TopStyle}>
+        <div css={margin10TopStyle}>
           <span css={mediumTextStyle}>This is to certify that</span>
         </div>
-        <div css={margin40TopStyle}>
+        <div css={margin10TopStyle}>
           <span css={largeTextStyleBold}>{document.recipient.name}</span>
           <hr css={hrStyleName} />
         </div>
-        <div css={margin40TopStyle}>
+        <div css={margin10TopStyle}>
           <span css={mediumTextStyle}>has attended</span>
         </div>
-        <div css={margin40TopStyle}>
+        <div css={margin10TopStyle}>
           <span css={mediumTextStyleBold}>{document.courseDetails.name}</span>
         </div>
-        <div css={margin40TopStyle}>
+        <div css={margin10TopStyle}>
           <span css={mediumTextStyle}>and passed the required assessment.</span>
         </div>
-        <div css={margin40TopStyle}>
+        <div css={margin10TopStyle}>
           <span css={mediumTextStyle}>
             Date: <u>{document.courseDetails.date}</u>
           </span>
