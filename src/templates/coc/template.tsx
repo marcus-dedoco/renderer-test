@@ -4,8 +4,11 @@ import { css } from "@emotion/core";
 import { GfiCocTemplateCertificate } from "../samples/customTemplateSample";
 
 const containerStyle = css`
+  position: absolute;
   width: 1130.88px;
   height: 1052.08px;
+  top: 0;
+  left: calc(50% - 1130.88px / 2);
   text-align: center;
   font-family: Arial, sans-serif;
 `;
@@ -15,7 +18,7 @@ const backgroundImageStyle = css`
   width: 1130.88px;
   height: 1052.08px;
   top: 0;
-  left: 0;
+  left: calc(50% - 1130.88px / 2);
   z-index: -1;
 `;
 
